@@ -1,0 +1,990 @@
+/* Tipografía general */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #1f1f1f, #2b2b36, #1f1f2e);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    color: #ffffff;
+}
+
+
+/* Animación del degradado */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.habilidad-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+header {
+    padding-bottom: 2rem 0;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.4), /* Reduce la opacidad del gradiente lineal */
+            rgba(0, 0, 0, 0.4)
+        ), 
+        url("/assets/index/Dia-del-programador.jpg");
+    background-size: cover; /* Asegura que la imagen ocupe todo el ancho */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative; /* Necesario para el gradiente radial */
+}
+
+.header-sin-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.4), /* Reduce la opacidad del gradiente lineal */
+        rgba(0, 0, 0, 0.4)
+    ); /* Fondo negro con 50% de opacidad */
+    border-radius: 10px; /* Bordes redondeados para un estilo más suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    position: relative;
+}
+
+.navbar a, .navbar .navbar-nav .nav-item a{
+    color:white
+}
+
+.navbar a, .navbar .navbar-nav .nav-item a:hover{
+    color: #00d4ff;
+}
+
+header::after, .navbar:hover {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)); /* Reduce la intensidad del radial */
+    z-index: 1; /* Asegura que el gradiente esté encima de la imagen pero detrás del contenido */
+}
+
+.experiencia-row:hover, #carouselExampleCaptions:hover{
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)); /* Reduce la intensidad del radial */
+    z-index: 1; /* Asegura que el gradiente esté encima de la imagen pero detrás del contenido */
+}
+
+.contenedor-perfil {
+    position: relative; /* Asegura que el contenido esté encima del gradiente */
+    z-index: 2;
+    color: #fff;
+}
+
+.contenedor-perfil p {
+    color: #cccccc;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: #00ffcc;
+    font-family: 'Orbitron', sans-serif; /* Fuente moderna */
+}
+
+header p {
+    font-size: 1.5rem;
+    color: #cccccc;
+    font-family: 'Rajdhani', sans-serif; /* Fuente moderna */
+}
+
+
+.contenedor-perfil {
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+    border-radius: 10px; /* Bordes redondeados para un estilo más suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+}
+
+.contenedor-perfil:hover, .educacion-lista:hover, .card-group:hover {
+    background: rgba(0, 0, 0, 0.6); /* Aumenta la opacidad al pasar el cursor */
+    transition: background 0.3s ease; /* Transición suave */
+}
+
+
+.contenedor-img-principal {
+    width: 38%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; /* Bordes redondeados */
+    background: linear-gradient(120deg, rgba(0, 255, 204, 0.5), rgba(0, 119, 255, 0.5));
+    padding: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contenedor-img-principal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.contenedor-img-principal img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Coincide con el padding para integrar el efecto */
+    filter: brightness(90%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contenedor-img-principal:hover img {
+    transform: scale(1.1);
+    filter: brightness(100%);
+}
+
+.img-perfil-contenedor {
+    position: relative;
+    border-radius: 5%;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(120deg, rgba(0, 255, 204, 0.5), rgba(0, 119, 255, 0.5));
+    padding: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-perfil-contenedor:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.img-perfil-contenedor img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.img-perfil-contenedor:hover img {
+    transform: scale(1.1);
+}
+
+
+.info-perfil-contenedor{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-perfil-contenedor img{
+    width: 100%;
+}
+
+/* Secciones */
+section {
+    padding: 3rem 0;
+}
+
+/* Títulos de secciones */
+h2 {
+    text-align: center;
+    color: #00d4ff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+}
+
+.habilidades{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), /* Reduce la opacidad del gradiente lineal */
+        rgba(0, 0, 0, 0.3)
+    ), 
+    url("/assets/index/programacion-2-e1551291144973.jpg");
+background-size: cover; /* Asegura que la imagen ocupe todo el ancho */
+background-position: center; /* Centra la imagen */
+background-repeat: no-repeat; /* Evita que la imagen se repita */
+position: relative; /* Necesario para el gradiente radial */
+}
+
+.habilidad-info{
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.habilidad-info h5{
+    font-weight: bold;
+}
+
+#carouselExampleCaptions, .experiencia-row, .educacion-lista, .card-group, .card{
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+    border-radius: 10px; /* Bordes redondeados para un estilo más suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+}
+
+.card-body{
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    border-top: 1px solid #00d4ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+.card{
+    border: 1px solid #00d4ff;
+}
+
+.card-body .card-title{
+    font-weight: bold;
+}
+
+.card-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botones de carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: none; /* Elimina el filtro */
+    background-color: black; /* Hace los botones blancos */
+    border-radius: 50%; /* Opción: redondear los botones */
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* Transición suave entre slides */
+.carousel-item {
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+/* Opcional: estilos al pasar el cursor sobre los botones */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: black; /* Cambiar opacidad al hover */
+}
+
+
+.carousel-item.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-inner img {
+    filter: brightness(80%);
+    border-radius: 10px;
+}
+
+.img-habilidad-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Botones de carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.experiencia{
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.3), /* Reduce la opacidad del gradiente lineal */
+            rgba(0, 0, 0, 0.3)
+        ), 
+        url("/assets/index/Programadores-en-Argentina.jpg");
+    background-size: cover; /* Asegura que la imagen ocupe todo el ancho */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative; /* Necesario para el gradiente radial */
+}
+
+.experiencia-contenedor h5{
+    font-weight: bold;
+}
+
+.experiencia-lista{
+    list-style: circle;
+}
+
+.educacion{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), /* Reduce la opacidad del gradiente lineal */
+        rgba(0, 0, 0, 0.3)
+    ), 
+    url("/assets/index/1694282866727.png");
+background-size: cover; /* Asegura que la imagen ocupe todo el ancho */
+background-position: center; /* Centra la imagen */
+background-repeat: no-repeat; /* Evita que la imagen se repita */
+position: relative; /* Necesario para el gradiente radial */
+}
+
+.educacion-lista{
+    font-family: 'Rajdhani', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.educacion-lista-item{
+    padding: 10px;
+    border: 1px solid #00d4ff;
+    border-top: 1px solid #00d4ff;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.educacion-lista-item p{
+    margin-bottom: 10px;
+}
+
+.academia-imagen-contenedor{
+    width: 30%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo general para las secciones con fondo */
+.background-section {
+    position: relative;
+    color: white;
+  
+    /* Efecto de degradado en los bordes */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+    
+    /* Transición suave al cambiar de fondo */
+    transition: opacity 1.5s ease-in-out, background-image 1.5s ease-in-out;
+  }
+
+  /* Clase específica para el header */
+.header-background {
+    position: relative;
+    color: white;  
+    /* Efecto de degradado solo en la parte inferior */
+    -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    
+    /* Transición suave */
+    transition: opacity 1.5s ease-in-out, background-image 1.5s ease-in-out;
+  }
+  
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    background-color: rgb(1 80 137) !important;
+    text-align: center;
+    padding: 1rem;
+    color: #888888;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Rajdhani', sans-serif; 
+    row-gap: 20px;
+}
+
+footer label{
+    font-weight: bold;
+}
+
+.medio-contacto img{
+    width: 30px;
+    height: 30px;
+}
+
+.contacto-link{
+    text-decoration: none; 
+    color: white; 
+    cursor: pointer;
+}
+
+.medio-contacto:hover{
+    cursor: pointer;
+}
+
+.experiencias-contenedor{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.adicionales{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), /* Reduce la opacidad del gradiente lineal */
+        rgba(0, 0, 0, 0.3)
+    ), 
+    url("/assets/index/1280.jpg");
+background-size: cover; /* Asegura que la imagen ocupe todo el ancho */
+background-position: center; /* Centra la imagen */
+background-repeat: no-repeat; /* Evita que la imagen se repita */
+position: relative; /* Necesario para el gradiente radial */
+}
+
+
+.contenedor-perfil h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.experiencia-contenedor{
+    font-family: 'Rajdhani', sans-serif;
+}
+
+@media (max-width: 575px) {
+    .navbar{
+        display: none;
+    }
+
+    .header-sin-nav{
+        padding: 1.5rem;
+    }
+
+    .contenedor-perfil{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px;
+        row-gap: 10px;
+    }
+
+    .contenedor-perfil h1 {
+        font-size: 2rem;
+    }
+
+    .contenedor-perfil p{
+        font-size: 1rem;
+    }
+
+    .img-perfil-contenedor{
+        width: 80%;
+        height: 320px;
+    }
+
+    #carouselExampleCaptions{
+        height: 520px;
+    }
+
+    .img-habilidad-container img{
+        width: 400px;
+        height: 350px;
+    }
+
+    .experiencias-contenedor{
+        width: 90%;
+    }
+
+    .experiencia-row{
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .experiencia-contenedor{
+        width: 100%;
+    }
+
+    .empresa-logo-contenedor{
+        width: 50%;
+    }
+    
+    .empresa-logo-contenedor img{
+        width: 95%;
+        height: 100px;
+    }
+
+    .academia-imagen-contenedor img{
+        height: 50%;
+        width: 100%;
+    }
+
+    .educacion-lista{
+        padding: 0.5rem;
+        row-gap: 30px;
+    }
+
+    .adicionales .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-group{
+        width: 95%;
+        padding: 10px;
+    }
+
+    .card-img-container{
+        height: 200px;
+    }
+
+    .card-img-container .card-img-top{
+        width: 70%;
+        height: 80%;
+    }
+
+    .contacto-info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 10px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar{
+        display: none;
+    }
+
+    .header-sin-nav{
+        padding: 1.5rem;
+    }
+
+    .contenedor-perfil{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px;
+        row-gap: 10px;
+    }
+
+    .contenedor-perfil h1 {
+        font-size: 2rem;
+    }
+
+    .contenedor-perfil p{
+        font-size: 1rem;
+    }
+
+    .img-perfil-contenedor{
+        width: 350px;
+        height: 320px;
+    }
+
+    #carouselExampleCaptions{
+        height: 520px;
+    }
+
+    .habilidades .container, .educacion .container, .adicionales .container{
+        max-width: 90%;
+    }
+
+    .img-habilidad-container img{
+        width: 400px;
+        height: 350px;
+    }
+
+    .experiencias-contenedor{
+        max-width: 90% !important;
+    }
+
+    .experiencia-row{
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .experiencia-contenedor{
+        width: 100%;
+    }
+
+    .empresa-logo-contenedor{
+        width: 50%;
+    }
+    
+    .empresa-logo-contenedor img{
+        width: 95%;
+        height: 100px;
+    }
+
+    .academia-imagen-contenedor img{
+        height: 50%;
+        width: 100%;
+    }
+
+    .educacion-lista{
+        padding: 0.5rem;
+        row-gap: 30px;
+    }
+
+    .adicionales .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-group{
+        width: 420px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .card-img-container{
+        height: 200px;
+    }
+
+    .card-img-container .card-img-top{
+        width: 70%;
+        height: 80%;
+    }
+
+    .contacto-info{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .header-sin-nav{
+        padding: 3rem;
+    }
+
+    .contenedor-perfil{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px; /* Aumentado para más espacio */
+        gap: 4%;
+    }
+
+    .contenedor-perfil h1 {
+        font-size: 3rem;
+    }
+
+    .contenedor-perfil p{
+        font-size: 1.5rem;
+    }
+
+    .img-perfil-contenedor{
+        width: 50%;
+        height: 400px;
+    }
+
+    #carouselExampleCaptions{
+        height: 550px;
+    }
+
+    .img-habilidad-container img{
+        width: 450px;
+        height: 400px;
+    }
+
+    .experiencia-row{
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .experiencia-contenedor{
+        width: 70%;
+    }
+
+    .empresa-logo-contenedor{
+        width: 25%;
+    }
+    
+    .empresa-logo-contenedor img{
+        width: 100%;
+        height: 160px;
+    }
+
+    .academia-imagen-contenedor img{
+        height: 50%;
+        width: 50%;
+    }
+
+    .educacion-lista{
+        padding: 1rem;
+        row-gap: 50px;
+    }
+
+    .card-img-container{
+        height: 300px;
+    }
+
+    .card-img-container .card-img-top{
+        width: 90%;
+        height: 80%;
+    }
+
+    .contacto-info{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .header-sin-nav{
+        padding: 3rem;
+    }
+
+    .contenedor-perfil{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px; /* Aumentado para más espacio */
+        gap: 4%;
+    }
+
+    .contenedor-perfil h1 {
+        font-size: 3rem;
+    }
+
+    .contenedor-perfil p{
+        font-size: 1.5rem;
+    }
+
+    .img-perfil-contenedor{
+        width: 50%;
+        height: 400px;
+    }
+
+    #carouselExampleCaptions{
+        height: 550px;
+    }
+
+    .img-habilidad-container img{
+        width: 450px;
+        height: 400px;
+    }
+
+    .experiencia-row{
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .experiencia-contenedor{
+        width: 70%;
+    }
+
+    .empresa-logo-contenedor{
+        width: 25%;
+    }
+    
+    .empresa-logo-contenedor img{
+        width: 100%;
+        height: 160px;
+    }
+
+    .academia-imagen-contenedor img{
+        height: 50%;
+        width: 50%;
+    }
+
+    .educacion-lista{
+        padding: 1rem;
+        row-gap: 50px;
+    }
+
+    .card-img-container{
+        height: 300px;
+    }
+
+    .card-img-container .card-img-top{
+        width: 90%;
+        height: 80%;
+    }
+
+    .contacto-info{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    .header-sin-nav{
+        padding: 3rem;
+    }
+
+    .contenedor-perfil{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px; /* Aumentado para más espacio */
+        gap: 4%;
+    }
+
+    .contenedor-perfil h1 {
+        font-size: 3rem;
+    }
+
+    .contenedor-perfil p{
+        font-size: 1.5rem;
+    }
+
+    .img-perfil-contenedor{
+        width: 50%;
+        height: 400px;
+    }
+
+    #carouselExampleCaptions{
+        height: 550px;
+    }
+
+    .img-habilidad-container img{
+        width: 450px;
+        height: 400px;
+    }
+
+    .experiencia-row{
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .experiencia-contenedor{
+        width: 70%;
+    }
+
+    .empresa-logo-contenedor{
+        width: 25%;
+    }
+    
+    .empresa-logo-contenedor img{
+        width: 100%;
+        height: 160px;
+    }
+
+    .academia-imagen-contenedor img{
+        height: 50%;
+        width: 50%;
+    }
+
+    .educacion-lista{
+        padding: 1rem;
+        row-gap: 50px;
+    }
+
+    .card-img-container{
+        height: 300px;
+    }
+
+    .card-img-container .card-img-top{
+        width: 90%;
+        height: 80%;
+    }
+
+    .contacto-info{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    .header-sin-nav{
+        padding: 3rem;
+    }
+
+    .contenedor-perfil{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px; /* Aumentado para más espacio */
+        gap: 4%;
+    }
+
+    .contenedor-perfil h1 {
+        font-size: 3rem;
+    }
+
+    .contenedor-perfil p{
+        font-size: 1.5rem;
+    }
+
+    .img-perfil-contenedor{
+        width: 50%;
+        height: 400px;
+    }
+
+    #carouselExampleCaptions{
+        height: 550px;
+    }
+
+    .img-habilidad-container img{
+        width: 450px;
+        height: 400px;
+    }
+
+    .experiencia-row{
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .experiencia-contenedor{
+        width: 70%;
+    }
+
+    .empresa-logo-contenedor{
+        width: 25%;
+    }
+    
+    .empresa-logo-contenedor img{
+        width: 100%;
+        height: 160px;
+    }
+
+    .academia-imagen-contenedor img{
+        height: 50%;
+        width: 50%;
+    }
+
+    .educacion-lista{
+        padding: 1rem;
+        row-gap: 50px;
+    }
+
+    .card-img-container{
+        height: 300px;
+    }
+
+    .card-img-container .card-img-top{
+        width: 90%;
+        height: 80%;
+    }
+
+    .contacto-info{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
